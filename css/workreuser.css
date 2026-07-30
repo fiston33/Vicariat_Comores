@@ -1,0 +1,1363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+
+/* :root {
+    --primary: #111827;
+    --accent: #ffff;
+    --white: #ffffff;
+    --light: #f3f4f6;
+} */
+
+:root {
+    --primary: #111827;
+    --accent: #ffff00; /* pure yellow */
+    --white: #ffffff;
+    --light: #f3f4f6;
+}
+
+
+.container {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #00000019;
+    border-radius: 15px;
+}
+/* 
+
+.topparish {
+    width: 100%;
+    min-height: 550px;
+    background-image:
+        linear-gradient(to right, #0000009d, #0000009d, #00000000),
+        url("/images/cath.jpeg");
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -1;
+} */
+
+.topparish {
+    width: 100%;
+    min-height: 550px;
+    background-image:
+        linear-gradient(to right, #0000009d, #0000009d, #00000000),
+        url("../images/WhatsApp\ Image\ 2026-06-25\ at\ 15.50.34.jpeg");
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* keep this */
+    /* remove z-index: -1 */
+}
+
+
+
+
+.iconscontact {
+    width: 22%;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+    justify-self: right;
+    margin-top: 70px;
+    
+
+}
+
+
+
+.iconscontact i {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--accent); /* yellow icons */
+}
+
+.iconscontact button {
+    border: none;
+    padding: 5px 25px;
+    background-color: #111827;
+    border-radius: 8px;
+    color: #f1f1f1;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.iconscontact button i {
+    font-size: 16px;
+}
+
+/* 
+.linksmenu {
+    width: 78%;
+    height: 50px;
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: var(--accent); 
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+} */
+
+/* Base menu */
+.linksmenu {
+  width: 80%;
+  height: auto;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--accent);
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* Hamburger icon hidden by default */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.linksmenu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0 40px;
+    margin-bottom: 10px;
+}
+
+.linksmenu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.linksmenu ul li a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+
+
+
+
+.bienvenue {
+    width: 50%;
+    min-height: 400px;
+    margin-top: 100px;
+    background-color: #00000019;
+    margin-left: 60px;
+}
+
+.bienvenue h1 {
+    color: #f3f4f6;
+    font-size: 55px;
+    font-weight: 700;
+    margin-top: -20px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    padding: 15px 35px;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+.hero-buttons a:first-child {
+    background: #474799;
+}
+
+.hero-buttons a:last-child {
+    background: #1c7d2c;
+}
+
+
+.ILoveyouma {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f6f2f2;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    margin-top: -60px;
+     position: relative;
+    z-index: 1100; /* higher than menu */
+}
+
+.maaaa {
+    text-align: center;
+    padding: 15px;
+}
+
+.maaaa i {
+    font-size: 40px;
+    color: #474799;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    display: block;
+    text-align: center;
+
+
+}
+
+.maaaa h2 {
+    font-size: 28px;
+    color: #1c7d2c;
+    margin: 5px 0;
+}
+
+.maaaa span {
+    font-size: 16px;
+    color: #1c7d2c;
+    display: block;
+    text-align: center;
+}
+
+
+ .thebigannounce {
+  width: 100%;
+  min-height: 450px;
+  background-color: black;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap; /* allow stacking */
+}
+
+.leftann {
+  width: 45%;
+  min-height: 400px;
+  margin-left: 20px;
+}
+
+.leftann h1 {
+  color: var(--accent); /* yellow title */
+  padding: 5px;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 15px;
+}
+
+.blo h2 {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+.blo i {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.leftann button {
+  padding: 12px 40px;
+  color: var(--primary);
+  background-color: var(--accent);
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.leftann button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.rightann {
+  width: 45%;
+  min-height: 400px;
+}
+
+.rightann img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 100px;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  .thebigannounce {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .leftann,
+  .rightann {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .leftann h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .leftann h1 {
+    font-size: 24px;
+  }
+  .blo h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .leftann button {
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.thebigaboutus {
+  width: 100%;
+  min-height: 600px;
+  background-color: var(--white);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.leftab {
+  width: 55%;
+  min-height: 500px;
+  margin: 40px auto;
+}
+
+.leftab h1 {
+  color: var(--accent); /* yellow heading */
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.leftab h3 {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.leftab p {
+  font-size: 16px;
+  color: #555;
+}
+
+.leftab button {
+  padding: 12px 40px;
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.leftab button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.rightab {
+  width: 40%;
+  min-height: 500px;
+  margin: 40px auto;
+}
+
+.rightab img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 12px 200px;
+}
+
+
+@media (max-width: 1024px) {
+  .thebigaboutus {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .leftab,
+  .rightab {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .leftab h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .leftab h1 {
+    font-size: 22px;
+  }
+  .leftab h3 {
+    font-size: 18px;
+  }
+  .leftab p {
+    font-size: 14px;
+  }
+  .leftab button {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+
+
+/* donation section */
+
+
+/* MAIN BOX */
+.donation-box {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: white;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+/* LEFT */
+.donation-options {
+    width: 50%;
+    padding: 30px;
+    background: #111827;
+    color: white;
+}
+
+.amounts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.amounts button {
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    background: #1f2937;
+    color: white;
+    border-radius: 5px;
+}
+
+.amounts button:hover {
+    background: #374151;
+}
+
+.donation-options input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+/* RIGHT */
+.donation-form {
+    width: 50%;
+    padding: 30px;
+}
+
+.donation-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation-form input,
+.donation-form select {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.donation-form button {
+    padding: 15px;
+    background: #3267c8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.donation-form button:hover {
+    background: #022d5d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-parish,
+#conseil,
+#commissions,
+#groupes,
+#organisation,
+#messes,
+#actualites,
+#events,
+#contact {
+
+    width: 100%;
+    padding: 80px 8%;
+    border-bottom: 2px solid blue;
+}
+
+.section-title,
+.hblo {
+
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h1,
+.hblo h1 {
+
+    font-size: 42px;
+    color: #0b3d91;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h1::after,
+.hblo h1::after {
+
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #1c7d2c;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+
+
+/* vie de la paroisse */
+
+.life-grid {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.life-card {
+
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    transition: .4s;
+}
+
+.life-card:hover {
+
+    transform: translateY(-10px);
+}
+
+.life-card i {
+
+    font-size: 55px;
+    color: #0b3d91;
+    margin-bottom: 20px;
+}
+
+.life-card h3 {
+
+    margin-bottom: 15px;
+    color: #222;
+}
+
+
+
+
+/* consiel paroisserl */
+.tteam {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+
+.teamme {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+  transition: .4s;
+}
+
+.teamme:hover {
+  transform: translateY(-8px);
+}
+
+.teamme img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.teamme h2 {
+  color: var(--primary); 
+  margin-top: 15px;
+}
+
+.teamme h3 {
+  color: #777;
+  font-weight: 400;
+}
+
+.teamme p {
+  padding: 15px;
+  color: #555;
+}
+
+
+
+
+/* commisions + Groupes */
+.principaux {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.principame {
+
+    background: white;
+    padding: 35px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+    transition: .4s;
+}
+
+.principame:hover {
+
+    background: #0b3d91;
+    color: white;
+
+    transform: translateY(-10px);
+}
+
+.principame i {
+
+    font-size: 50px;
+    color: #1c7d2c;
+    margin-bottom: 15px;
+}
+
+
+/* organisation */
+
+
+.org-chart {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.org-box {
+
+    background: white;
+    padding: 25px 40px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0b3d91;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    border-top: 5px solid #1c7d2c;
+}
+
+
+/* Mass schedule */
+
+
+.mass-table {
+
+    max-width: 900px;
+    margin: auto;
+}
+
+.mass-row {
+
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+}
+
+.mass-row span:first-child {
+
+    color: #0b3d91;
+    font-weight: bold;
+}
+
+.mass-row span:last-child {
+
+    color: #1c7d2c;
+    font-weight: bold;
+}
+
+
+
+/* News and events */
+
+
+
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    transition: .4s;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content h3 {
+    color: #0b3d91;
+}
+
+.news-content a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    background: #0b3d91;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+/* contact */
+
+
+
+.formmap {
+
+    width: 100%;
+    min-height: 400px;
+    background-color: #111827;
+    display: flex;
+
+}
+
+.formme {
+    width: 45%;
+    min-height: 395px;
+}
+
+.formme form {
+    width: 95%;
+    min-height: 370px;
+    padding: 15px;
+    margin: 13px;
+}
+
+.formme form label {
+    color: #dfdfdf;
+    padding: 15px;
+    margin: 5px;
+}
+
+.formme form input {
+    background-color: #111827;
+    width: 500px;
+    height: 45px;
+    /* padding: 10px 150px; */
+    margin: 5px 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 18px;
+
+
+}
+
+.formme form button {
+    padding: 12px 60px;
+    margin: 10px 15px;
+    background-color: #652af9;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.formme form button:hover {
+    background-color: #321777d2;
+
+}
+
+.mapme {
+    width: 55%;
+    height: 500px;
+}
+
+.mapme iframe {
+    width: 100%;
+    height: 490px;
+}
+
+
+
+/* Parish Sticky Menu */
+
+
+
+ /* Base styles (keep existing) */
+.contract {
+  width: 100%;
+  min-height: 800px;
+  background: url(/images/hist.jpeg);
+  background-size: cover;
+  margin-bottom: 100px;
+}
+
+.stateof {
+  background-color: rgba(72, 72, 72, 0.637);
+  width: 100%;
+  min-height: 800px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.stateof h1 {
+  color: var(--accent); /* pure yellow title */
+  font-size: 45px;
+  padding: 20px;
+  text-align: center;
+}
+
+.atlanta {
+  background: rgba(82, 82, 232, 0.621);
+  border-radius: 10px;
+  width: 90%; /* fluid width */
+  max-width: 1300px;
+  min-height: 820px;
+  transition: 0.3s ease;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; /* allow stacking */
+}
+
+.atlanta img {
+  margin: 0;
+  width: 50%;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+
+.dearmom {
+  width: 50%;
+  min-height: 520px;
+  padding: 20px;
+}
+
+.dearmom h2 {
+  color: var(--accent); /* yellow heading */
+  font-size: 32px;
+  padding: 10px 0;
+}
+
+.dearmom p {
+  padding: 10px 0;
+  color: #f3f4f6;
+  text-align: left;
+}
+
+/* Messe schedule */
+.messe {
+  background-color: var(--primary);
+  width: 100%;
+  min-height: 300px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.messe h3 {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.messflex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.messflex .messeflex {
+  flex: 1;
+  min-width: 200px;
+}
+
+.messeflex p {
+  text-align: center;
+  border-bottom: 1px solid var(--white);
+  color: var(--white);
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  .atlanta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .atlanta img,
+  .dearmom {
+    width: 100%;
+  }
+  .dearmom h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .dearmom p {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .stateof h1 {
+    font-size: 28px;
+  }
+  .dearmom h2 {
+    font-size: 22px;
+  }
+  .dearmom p {
+    font-size: 14px;
+  }
+  .messe h3 {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+.alinefooter {
+
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 50px 5%;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .75),
+            rgba(0, 0, 0, .75)),
+        url("../images/cath.jpeg");
+
+
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.alinefooter img {
+    width: 230px;
+    height: 180px;
+}
+
+.aliifoo {
+    flex: 1;
+    min-width: 220px;
+
+    min-height: 270px;
+    padding: 10px;
+}
+
+.aliifoo h1 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.aliifoo ul {
+    list-style: none;
+}
+
+.aliifoo ul li {
+    padding: 5px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.aliifoo ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.726);
+}
+
+
+.alinei i {
+    margin-top: 10px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.726);
+}
+
+
+.aliifoo h5 {
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.aliifoo h4 {
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.aliifoo p {
+    color: white;
+    text-align: center;
+}
+
+.alinei a {
+    color: white;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: .3s;
+
+}
+
+.alinei a:hover {
+    transform: translateY(-3px);
+}
+
+
+
+
+.footer-donate {
+    display: inline-block;
+    margin-top: 15px;
+    background: #152a6e;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    margin-left: 80px;
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsivenesss */
+/* 
+@media (max-width: 768px) {
+  .linksmenu {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .linksmenu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .linksmenu ul li a {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+  }
+}
+
+ */
+
+ /* Responsive menu */
+@media (max-width: 768px) {
+  .linksmenu {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .linksmenu ul {
+    display: none; /* hide links initially */
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .linksmenu ul.show {
+    display: flex; /* show when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger */
+    text-align: right;
+  }
+
+  .linksmenu ul li a {
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    color: var(--white);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .iconscontact {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .iconscontact a i {
+    font-size: 28px;
+    margin: 0 10px;
+  }
+
+  .iconscontact button {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .bienvenue {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .bienvenue h1 {
+    font-size: 32px;
+  }
+
+  .bienvenue h2 {
+    font-size: 28px;
+  }
+
+  .hero-buttons a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+  .ILoveyouma,
+  .life-grid,
+  .principaux {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .maaaa h2 {
+    font-size: 20px;
+  }
+
+  .maaaa span {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .donation-box {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .donation-options,
+  .donation-form {
+    width: 100%;
+  }
+
+  .formmap {
+    flex-direction: column;
+  }
+
+  .formme,
+  .mapme {
+    width: 100%;
+  }
+
+  .formme form input {
+    width: 100%;
+  }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+  .tteam {
+    gap: 20px;
+  }
+  .teamme img {
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title h1 {
+    font-size: 32px;
+  }
+  .teamme h2 {
+    font-size: 20px;
+  }
+  .teamme h3 {
+    font-size: 16px;
+  }
+  .teamme p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tteam {
+    grid-template-columns: 1fr;
+  }
+  .teamme {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .teamme img {
+    height: 200px;
+  }
+}
+
+
+
+
