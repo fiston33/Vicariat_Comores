@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Admin — modern layer. Loaded after admin-layout.css and overrides its look
+   without changing any markup the admin pages rely on.
+   ========================================================================== */
+:root {
+    --ink: #0d1a31;
+    --navy: #142c57;
+    --blue: #1f4c8f;
+    --gold: #c39a3a;
+    --gold-soft: #f5ecd6;
+    --bg: #f5f3ee;
+    --surface: #ffffff;
+    --text: #1b2234;
+    --muted: #5e6779;
+    --line: #e6e0d4;
+    --danger: #b3261e;
+    --danger-bg: #fbeceb;
+    --success: #1f7a4d;
+    --success-bg: #e6f4ec;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(13, 26, 49, .05), 0 6px 20px rgba(13, 26, 49, .06);
+}
+
+* { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+body { background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+a { color: var(--blue); }
+
+/* Layout ---------------------------------------------------------------- */
+.admin-container { display: flex; min-height: 100vh; background: var(--bg); }
+.main, .main-content { flex: 1; min-width: 0; background: var(--bg); padding: 0 0 3rem; }
+
+/* Sidebar --------------------------------------------------------------- */
+.sidebar {
+    width: 264px; flex-shrink: 0; padding: 1.25rem .9rem;
+    background: var(--ink); color: #c9d1e0;
+    position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    display: flex; flex-direction: column; gap: 1rem;
+}
+.sidebar h2 { display: none; }
+.sidebar-brand { display: flex !important; align-items: center; gap: .75rem; padding: .5rem .6rem 1.1rem !important; margin: 0 0 .25rem !important; border-bottom: 1px solid rgba(255, 255, 255, .08); border-radius: 0 !important; }
+.sidebar-brand:hover { background: none !important; }
+.sidebar-brand img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background: #fff; }
+.sidebar-brand span { display: flex; flex-direction: column; line-height: 1.2; }
+.sidebar-brand strong { font-family: "Fraunces", Georgia, serif; font-size: 1.1rem; color: #fff; font-weight: 600; }
+.sidebar-brand small { font-size: .74rem; color: #8f9ab0; letter-spacing: .08em; text-transform: uppercase; }
+.sidebar-nav { display: grid; gap: 2px; }
+.sidebar a {
+    display: flex; align-items: center; gap: .75rem;
+    padding: .62rem .8rem; margin: 0; border-radius: 10px;
+    color: #c9d1e0; font-size: .92rem; font-weight: 500; text-decoration: none;
+    transition: background-color .15s, color .15s;
+}
+.sidebar a i { width: 1.1rem; text-align: center; color: #8f9ab0; transition: color .15s; }
+.sidebar a:hover { background: rgba(255, 255, 255, .06); color: #fff; }
+.sidebar a:hover i { color: #fff; }
+.sidebar a.is-active { background: linear-gradient(90deg, rgba(195, 154, 58, .28), rgba(195, 154, 58, .08)); color: #fff; box-shadow: inset 3px 0 0 var(--gold); }
+.sidebar a.is-active i { color: var(--gold); }
+.sidebar-foot { margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, .08); display: grid; gap: 2px; }
+
+/* Top bar / page header ------------------------------------------------- */
+.topbar, .page-header {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    padding: 1.4rem 2rem; margin: 0 0 1.5rem;
+    background: rgba(255, 255, 255, .85); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 5;
+}
+.topbar h1, .page-header h1 { font-family: "Fraunces", Georgia, serif; font-size: 1.6rem; font-weight: 600; color: var(--ink); margin: 0; letter-spacing: -.01em; }
+.topbar p, .page-header p { margin: 0; color: var(--muted); }
+.topbar a, .page-header a {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .6rem 1.15rem; border-radius: 999px;
+    background: var(--navy); color: #fff; font-weight: 600; font-size: .9rem; text-decoration: none;
+    transition: background-color .15s;
+}
+.topbar a:hover, .page-header a:hover { background: var(--ink); color: #fff; }
+
+/* Stat cards ------------------------------------------------------------ */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding: 0 2rem 1.5rem; }
+.card, .summary-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.25rem 1.4rem; text-align: left; box-shadow: none;
+}
+.card h3, .summary-card h3 { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+.card p, .summary-card h2 { margin-top: .4rem !important; padding: 0 !important; text-align: left; font-family: "Fraunces", Georgia, serif; font-size: 2.4rem; line-height: 1.1; color: var(--ink); font-weight: 600; margin: .4rem 0 0; }
+.messages-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding: 0 2rem 1.5rem; }
+
+.newsh1 { width: auto; height: auto; background: none; padding: .5rem 2rem 0; }
+.newsh1 h1 { width: auto; height: auto; padding: 0; background: none; color: var(--ink); font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; font-weight: 600; margin-bottom: .75rem; }
+.section-header { padding: 0 2rem; }
+
+/* Tables ---------------------------------------------------------------- */
+.table-container {
+    margin: 0 2rem; padding: 0; overflow-x: auto;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.table-header { display: flex; gap: .75rem; flex-wrap: wrap; padding: 1rem; border-bottom: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; background: transparent; font-size: .9rem; }
+table th, .table-container th {
+    background: #faf8f4; color: var(--muted); text-align: left; font-weight: 600;
+    font-size: .74rem; letter-spacing: .08em; text-transform: uppercase;
+    padding: .85rem 1rem; border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+table td, .table-container td { padding: .85rem 1rem; border-bottom: 1px solid #f0ece4; vertical-align: middle; color: var(--text); }
+table tr:last-child td { border-bottom: 0; }
+table tr:hover td { background: #fcfbf8; }
+table td img { border-radius: 8px; object-fit: cover; max-height: 56px; }
+table td a { text-decoration: none; }
+
+/* Action buttons -------------------------------------------------------- */
+.view, .edit, .delete, .view-btn, .edit-btn, .delete-btn, .save-btn, .settings-save {
+    display: inline-flex; align-items: center; gap: .35rem;
+    padding: .4rem .8rem; margin: 2px; border-radius: 8px; border: 1px solid transparent;
+    font-size: .8rem; font-weight: 600; cursor: pointer; text-decoration: none;
+    transition: background-color .15s, border-color .15s, color .15s;
+}
+.view, .view-btn { background: #e8eef8; color: var(--navy); }
+.view:hover, .view-btn:hover { background: var(--navy); color: #fff; }
+.edit, .edit-btn { background: var(--gold-soft); color: #7a5d1c; }
+.edit:hover, .edit-btn:hover { background: var(--gold); color: #1b1404; }
+.delete, .delete-btn { background: var(--danger-bg); color: var(--danger); }
+.delete:hover, .delete-btn:hover { background: var(--danger); color: #fff; }
+.save-btn, .settings-save { background: var(--navy); color: #fff; padding: .7rem 1.3rem; font-size: .92rem; border-radius: 999px; }
+.save-btn:hover, .settings-save:hover { background: var(--ink); }
+.status-unread { color: var(--danger); font-weight: 600; }
+.status-read { color: var(--success); font-weight: 600; }
+
+/* Forms ----------------------------------------------------------------- */
+.form-container, .settings-container, .media-form, .settings-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 2rem; margin: 0 2rem 1.5rem; max-width: 880px; box-shadow: none;
+}
+.settings-container { background: none; border: 0; padding: 0; max-width: none; }
+.settings-card { margin: 0 0 1.25rem; }
+.settings-card h2, .media-form h2 { font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; color: var(--ink); }
+form { box-shadow: none; }
+.form-container form, .settings-card form, .media-form form { width: auto; max-width: none; padding: 0; margin: 0; background: none; border-radius: 0; }
+.form-container > form > label:first-child, .form-container > form > input[type="hidden"] + label { margin-top: 0; }
+form label, .form-group label { display: block; font-size: .85rem; font-weight: 600; color: var(--ink); margin: 1rem 0 .4rem; }
+form input[type="text"], form input[type="email"], form input[type="password"], form input[type="number"],
+form input[type="date"], form input[type="time"], form input[type="tel"], form input[type="url"], form input[type="search"],
+form select, form textarea, select, .table-header input, .donation-tools input, .donation-tools select {
+    width: 100%; min-height: 44px; padding: .65rem .9rem; margin: 0;
+    border: 1.5px solid var(--line); border-radius: 10px; background: #fff; color: var(--text);
+    font-size: .95rem; transition: border-color .15s, box-shadow .15s;
+}
+.table-header input, .donation-tools input, .donation-tools select { width: auto; min-width: 220px; }
+form textarea, .form-group textarea { min-height: 140px; resize: vertical; line-height: 1.55; }
+form input:focus, form select:focus, form textarea:focus, select:focus, .table-header input:focus {
+    outline: none; border-color: var(--navy); box-shadow: 0 0 0 4px rgba(31, 76, 143, .12);
+}
+form input[type="file"] { padding: .6rem; border: 1.5px dashed var(--line); border-radius: 10px; background: #faf8f4; width: 100%; }
+form button, .media-form button {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    margin-top: 1.5rem; padding: .75rem 1.5rem; border: 0; border-radius: 999px;
+    background: var(--navy); color: #fff; font-weight: 600; font-size: .95rem; cursor: pointer; width: auto;
+    transition: background-color .15s;
+}
+form button:hover, .media-form button:hover { background: var(--ink); }
+form br { display: none; }
+
+/* Tabs ------------------------------------------------------------------ */
+.tabs, .media-tabs { display: flex; gap: .4rem; flex-wrap: wrap; padding: 0 2rem 1rem; background: none; }
+.tabs button, .tab-btn {
+    padding: .5rem 1rem; border-radius: 999px; border: 1px solid var(--line); background: #fff;
+    color: var(--text); font-weight: 500; font-size: .88rem; margin: 0;
+}
+.tabs button.active, .tab-btn.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* Footer ---------------------------------------------------------------- */
+footer { background: none; border-top: 1px solid var(--line); color: var(--muted); text-align: center; padding: 1.5rem; font-size: .82rem; }
+footer p { color: var(--muted); }
+
+/* Responsive ------------------------------------------------------------ */
+@media (max-width: 900px) {
+    .admin-container { flex-direction: column; }
+    .sidebar { width: auto; height: auto; position: static; flex-direction: column; }
+    .sidebar-nav { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    .sidebar-foot { margin-top: 0; grid-template-columns: 1fr 1fr; }
+    .topbar, .page-header { padding: 1rem 1.25rem; position: static; }
+    .cards, .messages-summary { padding: 0 1.25rem 1.25rem; }
+    .table-container, .form-container, .media-form { margin: 0 1.25rem 1.25rem; }
+    .form-container { padding: 1.25rem; }
+}

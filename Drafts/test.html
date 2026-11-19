@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paroisse Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .linksmenu {
+            width: 78%;
+            height: 50px;
+            margin: 5px auto;
+            padding: 5px;
+            border-radius: 6px;
+            background-color: #010d21a4;
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .linksmenu ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0 40px;
+        }
+
+        .linksmenu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .linksmenu ul li a:hover {
+            border-bottom: 2px solid #ffffff;
+        }
+
+        section {
+            height: 100vh;
+            /* full screen height */
+            padding: 80px 20px;
+            /* space for fixed menu */
+        }
+
+        section:nth-child(even) {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="linksmenu">
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#vie">Vie de la Paroisse</a></li>
+            <li><a href="#conseil">Conseil</a></li>
+            <li><a href="#commissions">Commissions</a></li>
+            <li><a href="#groupes">Groupes</a></li>
+            <li><a href="#organisation">Organisation</a></li>
+            <li><a href="#actualites">Actualites</a></li>
+            <li><a href="#histoire">Histoire</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="accueil">
+        <h1>Accueil</h1>
+    </section>
+    <section id="vie">
+        <h1>Vie de la Paroisse</h1>
+    </section>
+    <section id="conseil">
+        <h1>Conseil</h1>
+    </section>
+    <section id="commissions">
+        <h1>Commissions</h1>
+    </section>
+    <section id="groupes">
+        <h1>Groupes</h1>
+    </section>
+    <section id="organisation">
+        <h1>Organisation</h1>
+    </section>
+    <section id="actualites">
+        <h1>Actualites</h1>
+    </section>
+    <section id="histoire">
+        <h1>Histoire</h1>
+    </section>
+    <section id="contact">
+        <h1>Contact</h1>
+    </section>
+
+</body>
+
+</html>
